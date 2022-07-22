@@ -1,17 +1,15 @@
 import React from "react";
-import { LinkContainer } from "react-router-bootstrap";
+import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
-      {/* <div className="container"> */}
-          
       <div className="container">
-        <a className="navbar-brand" href="/">
-          My Portfolio
-        </a>
+        <Nav.Link as={Link} to={"/"} className="navbar-brand">
+          My PortFolio
+        </Nav.Link>
 
-        
         <button
           className="navbar-toggler"
           type="button"
@@ -26,34 +24,28 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link " aria-current="page" href="home">
+              <Nav.Link as={Link} to={"/home"}>
                 Home
-              </a>
+              </Nav.Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="about">
-                About me
-              </a>
+              <Nav.Link as={Link} to={"/about"}>
+                about
+              </Nav.Link>
             </li>
-{/* 
-            <LinkContainer to="/about">
-              <Nav.Link>About</Nav.Link>
-            </LinkContainer> */}
-
             <li className="nav-item">
-              <a className="nav-link" href="mywork">
+              <Nav.Link as={Link} to={"/mywork"}>
                 My Work
-              </a>
+              </Nav.Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="contact">
+              <Nav.Link as={Link} to={"/contact"}>
                 Contact
-              </a>
+              </Nav.Link>
             </li>
           </ul>
         </div>
       </div>
-      {/* </div> */}
     </nav>
   );
 };
