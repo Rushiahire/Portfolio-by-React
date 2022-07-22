@@ -4,34 +4,45 @@ body {
   font-family: sans-serif;
 }
 
+nav{
+  background-color:rgb(226, 222, 222);
+}
 
 nav .navbar-nav {
   margin-left: auto;
 }
 
-
-
 nav ul li {
-  text-transform: uppercase;
-  
+  text-transform: uppercase; 
 }
 
 .navbar-nav li a {
-  color: white;
-  margin:0 0.75rem ;
+  color:black;
+  letter-spacing: 1.5px;
+  font-size: 1.1rem;
+  margin:0 2rem ;
   padding: 0 !important;
+  border-top: 0.2rem solid rgb(226, 222, 222);
 }
 
 .navbar-nav li a:hover {
-  color: red;
+  color:crimson;
+  border-top: 0.2rem solid orangered;
+
 }
 
 nav .navbar-brand {
   color: crimson;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 nav .navbar-brand:hover {
   color: crimson;
 }
+
+.navbar-nav li a.active,  .navbar-nav li a.active:focus {
+  border-top: 0.2rem solid orangered;
+}
+
+
